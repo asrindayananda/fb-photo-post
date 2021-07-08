@@ -24,10 +24,6 @@ feed_data = parse_rss_bytes(urlopen(feed_url).read())
 current_timestamp = int(datetime.now().strftime('%Y%m%d%H%M%S'))
 current_hour = int(datetime.now().strftime('%H'))
 
-if current_hour not in [9]:
-    print('Script wasnt called in a recommended hour. Aborting.')
-    sys.exit(0)
-
 for post in feed_data.items:
     post_timestamp = post.pub_date.strftime('%Y%m%d%H%M%S')
     json_index_content[post_timestamp] = {
