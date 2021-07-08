@@ -1,4 +1,4 @@
-name: fb-random-post-from-feed
+name: fb-photo-post
 on:
   push:
     branches: main
